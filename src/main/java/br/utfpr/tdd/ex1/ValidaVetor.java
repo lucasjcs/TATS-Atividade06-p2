@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 class ValidaVetor {
 
-    public void setVetor(double v[]) throws Exception {
+    public void setVetor(double[] v) throws IllegalArgumentException {
         if (v == null) {
             throw new IllegalArgumentException("vetor nao pode ser nulo");
         }
