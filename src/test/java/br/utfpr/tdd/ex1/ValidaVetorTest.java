@@ -10,14 +10,14 @@ public class ValidaVetorTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void verificaVetorVazioTest() throws Exception {
+    public void verificaVetorVazioTest() {
         ValidaVetor valida = new ValidaVetor();
         double v[] = {};
         valida.setVetor(v);
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void verificaVetorNuloTest() throws Exception {
+    public void verificaVetorNuloTest() {
         ValidaVetor valida = new ValidaVetor();
         double[] v = null;
         valida.setVetor(v);
