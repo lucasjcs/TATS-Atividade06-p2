@@ -2,7 +2,7 @@ package br.utfpr.tdd.ex1;
 
 class ValidaVetor {
 
-    void setVetor(double v[]) throws Exception {
+    public void setVetor(double v[]) throws Exception {
         if (v == null) {
             throw new IllegalArgumentException("vetor nao pode ser nulo");
         }
@@ -12,7 +12,7 @@ class ValidaVetor {
         }
     }
 
-    double[] getNMenoresValores(double[] v, double numero) {
+    public double[] getNMenoresValores(double[] v, double numero) {
         double[] aux = {};
         for (int i = 0; i < v.length; i++) {
             if (v[i] < numero) {
@@ -23,8 +23,8 @@ class ValidaVetor {
         return aux;
     }
 
-    double[] getNMaioresValores(double[] v, int numero) {
-        double[] aux = {};
+    public  double[] getNMaioresValores(double[] v, int numero) {
+        double[] aux = {0};
         for (int i = 0; i < v.length; i++) {
             if (v[i] > numero) {
                 aux[i] = v[i];
