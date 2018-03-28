@@ -1,5 +1,7 @@
 package br.utfpr.tdd.ex1;
 
+import java.util.ArrayList;
+
 class ValidaVetor {
 
     public void setVetor(double v[]) throws Exception {
@@ -12,24 +14,25 @@ class ValidaVetor {
         }
     }
 
-    public double[] getNMenoresValores(double[] v, double numero) {
-        double[] aux = {};
+    public ArrayList getNMenoresValores(double[] v, double numero) {
+        ArrayList<Double> aux = new ArrayList<>();
         for (int i = 0; i < v.length; i++) {
             if (v[i] < numero) {
-                aux[i] = v[i];
+                aux.add(v[i]);
             }
         }
 
         return aux;
     }
 
-    public  double[] getNMaioresValores(double[] v, int numero) {
-        double[] aux = {0};
+    public ArrayList getNMaioresValores(double[] v, double numero) {
+        ArrayList<Double> aux = new ArrayList<>();
         for (int i = 0; i < v.length; i++) {
             if (v[i] > numero) {
-                aux[i] = v[i];
+                aux.add(v[i]);
             }
         }
+
         return aux;
     }
 
