@@ -9,21 +9,21 @@ public class ValidaVetorTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void verificaVetorVazioTest() {
+    public void verificaVetorVazioTest() throws Exception {
         ValidaVetor valida = new ValidaVetor();
         double v[] = {};
         valida.setVetor(v);
     }
     
     @Test(expected = IllegalArgumentException.class)
-    public void verificaVetorNuloTest() {
+    public void verificaVetorNuloTest() throws Exception {
         ValidaVetor valida = new ValidaVetor();
         double[] v = null;
         valida.setVetor(v);
     }
     
     @Test
-    public void verificaNMenoresValores(){
+    public void verificaNMenoresValoresTest(){
         ValidaVetor valida = new ValidaVetor();
         double[] v = {1,2,3,4,5};
         double[] vresp = valida.getNMenoresValores(v, 4);
@@ -33,10 +33,10 @@ public class ValidaVetorTest {
     }
     
     @Test
-    public void verificaNMaioresValores(){
+    public void verificaNMaioresValoresTest(){
         ValidaVetor valida = new ValidaVetor();
         double[] v = {1,2,3,4,5};
-        double[] vresp = valida.getNMenoresValores(v, 3);
+        double[] vresp = valida.getNMaioresValores(v, 3);
         assertEquals(vresp[0], 4, 0.000001);
         assertEquals(vresp[1], 5, 0.000001);
     }
